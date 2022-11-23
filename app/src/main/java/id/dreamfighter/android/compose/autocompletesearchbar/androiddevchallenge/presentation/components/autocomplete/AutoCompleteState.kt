@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.presentation.components.autocomplete
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -45,7 +45,8 @@ interface AutoCompleteDesignScope {
     var boxShape: Shape
 }
 
-class AutoCompleteState<T : AutoCompleteEntity>(private val startItems: List<T>) : AutoCompleteScope<T> {
+class AutoCompleteState<T : AutoCompleteEntity>(private val startItems: List<T>) :
+    AutoCompleteScope<T> {
     private var onItemSelectedBlock: ItemSelected<T>? = null
 
     fun selectItem(item: T) {

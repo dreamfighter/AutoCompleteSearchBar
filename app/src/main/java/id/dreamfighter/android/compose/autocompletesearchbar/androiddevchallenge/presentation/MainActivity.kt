@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.presentation
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -21,18 +21,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.domain.models.Person
-import com.example.androiddevchallenge.presentation.sample.AutoCompleteObjectSample
-import com.example.androiddevchallenge.presentation.sample.AutoCompleteValueSample
-import com.example.androiddevchallenge.presentation.theme.MyTheme
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.domain.models.Person
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.sample.AutoCompleteObjectSample
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.sample.AutoCompleteValueSample
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
 

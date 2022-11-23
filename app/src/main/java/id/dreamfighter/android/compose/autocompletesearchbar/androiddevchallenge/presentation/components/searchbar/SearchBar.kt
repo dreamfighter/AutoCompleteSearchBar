@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.presentation.components.searchbar
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.searchbar
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions

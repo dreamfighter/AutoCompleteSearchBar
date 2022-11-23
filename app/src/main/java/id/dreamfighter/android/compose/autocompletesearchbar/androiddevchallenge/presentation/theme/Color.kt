@@ -13,17 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.domain.models
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.theme
 
-import com.example.androiddevchallenge.presentation.components.autocomplete.AutoCompleteEntity
-import java.util.Locale
+import androidx.compose.ui.graphics.Color
 
-data class Person(
-    val name: String,
-    val age: Int
-) : AutoCompleteEntity {
-    override fun filter(query: String): Boolean {
-        return name.toLowerCase(Locale.getDefault())
-            .startsWith(query.toLowerCase(Locale.getDefault()))
-    }
-}
+val purple200 = Color(0xFFBB86FC)
+val purple500 = Color(0xFF6200EE)
+val purple700 = Color(0xFF3700B3)
+val teal200 = Color(0xFF03DAC5)

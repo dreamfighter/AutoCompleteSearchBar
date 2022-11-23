@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.presentation.components.autocomplete
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi

@@ -13,16 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.presentation.components.autocomplete
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.theme
 
-import androidx.compose.runtime.Stable
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Shapes
+import androidx.compose.ui.unit.dp
 
-@Stable
-interface AutoCompleteEntity {
-    fun filter(query: String): Boolean
-}
-
-@Stable
-interface ValueAutoCompleteEntity<T> : AutoCompleteEntity {
-    val value: T
-}
+val shapes = Shapes(
+    small = RoundedCornerShape(4.dp),
+    medium = RoundedCornerShape(4.dp),
+    large = RoundedCornerShape(0.dp)
+)

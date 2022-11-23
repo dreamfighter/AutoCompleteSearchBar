@@ -13,14 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.presentation.theme
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.domain.models
 
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Shapes
-import androidx.compose.ui.unit.dp
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.AutoCompleteEntity
+import java.util.Locale
 
-val shapes = Shapes(
-    small = RoundedCornerShape(4.dp),
-    medium = RoundedCornerShape(4.dp),
-    large = RoundedCornerShape(0.dp)
-)
+data class Person(
+    val name: String,
+    val age: Int
+) : AutoCompleteEntity {
+    override fun filter(query: String): Boolean {
+        return name.toLowerCase(Locale.getDefault())
+            .startsWith(query.toLowerCase(Locale.getDefault()))
+    }
+}

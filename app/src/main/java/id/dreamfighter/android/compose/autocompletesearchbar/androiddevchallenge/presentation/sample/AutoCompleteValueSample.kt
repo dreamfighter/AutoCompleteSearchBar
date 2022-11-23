@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.presentation.sample
+package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.sample
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -32,25 +32,40 @@ import androidx.compose.ui.focus.FocusState
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.domain.models.Person
-import com.example.androiddevchallenge.presentation.components.autocomplete.AutoCompleteBox
-import com.example.androiddevchallenge.presentation.components.autocomplete.utils.AutoCompleteSearchBarTag
-import com.example.androiddevchallenge.presentation.components.searchbar.TextSearchBar
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.AutoCompleteBox
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.utils.AutoCompleteSearchBarTag
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.utils.asAutoCompleteEntities
+import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.searchbar.TextSearchBar
+import java.util.Locale
 
 @ExperimentalAnimationApi
 @Composable
-fun AutoCompleteObjectSample(persons: List<Person>) {
+fun AutoCompleteValueSample(items: List<String>) {
+
+    val items = listOf(
+        "Paulo Pereira",
+        "Daenerys Targaryen",
+        "Jon Snow",
+        "Sansa Stark",
+    )
+    val autoCompleteEntities = items.asAutoCompleteEntities(
+        filter = { item, query ->
+            item.toLowerCase(Locale.getDefault())
+                .startsWith(query.toLowerCase(Locale.getDefault()))
+        }
+    )
+
     AutoCompleteBox(
-        items = persons,
-        itemContent = { person ->
-            PersonAutoCompleteItem(person)
+        items = autoCompleteEntities,
+        itemContent = { item ->
+            ValueAutoCompleteItem(item.value)
         }
     ) {
         var value by remember { mutableStateOf("") }
         val view = LocalView.current
 
-        onItemSelected { person ->
-            value = person.name
+        onItemSelected { item ->
+            value = item.value
             filter(value)
             view.clearFocus()
         }
@@ -58,7 +73,7 @@ fun AutoCompleteObjectSample(persons: List<Person>) {
         TextSearchBar(
             modifier = Modifier.testTag(AutoCompleteSearchBarTag),
             value = value,
-            label = "Search with objects",
+            label = "Search by value",
             onDoneActionClick = {
                 view.clearFocus()
             },
@@ -68,7 +83,7 @@ fun AutoCompleteObjectSample(persons: List<Person>) {
                 view.clearFocus()
             },
             onFocusChanged = { focusState ->
-                isSearching = focusState == FocusState.Active
+                isSearching = focusState == FocusState::isFocused
             },
             onValueChanged = { query ->
                 value = query
@@ -79,14 +94,13 @@ fun AutoCompleteObjectSample(persons: List<Person>) {
 }
 
 @Composable
-fun PersonAutoCompleteItem(person: Person) {
+fun ValueAutoCompleteItem(item: String) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        Text(text = person.name, style = MaterialTheme.typography.subtitle2)
-        Text(text = person.age.toString(), style = MaterialTheme.typography.subtitle2)
+        Text(text = item, style = MaterialTheme.typography.subtitle2)
     }
 }
