@@ -25,12 +25,12 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.unit.dp
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.domain.models.Person
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.MainActivity
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.AutoCompleteBoxTag
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.utils.AutoCompleteSearchBarTag
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.sample.AutoCompleteObjectSample
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.theme.MyTheme
+import id.dreamfighter.android.compose.autocompletesearchbar.domain.models.Person
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.MainActivity
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.components.autocomplete.AutoCompleteBoxTag
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.components.autocomplete.utils.AutoCompleteSearchBarTag
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.sample.AutoCompleteObjectSample
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.theme.MyTheme
 import org.junit.Rule
 import org.junit.Test
 

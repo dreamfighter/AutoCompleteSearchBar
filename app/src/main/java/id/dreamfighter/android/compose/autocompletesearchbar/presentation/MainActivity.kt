@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation
+package id.dreamfighter.android.compose.autocompletesearchbar.presentation
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -26,10 +26,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.domain.models.Person
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.sample.AutoCompleteObjectSample
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.sample.AutoCompleteValueSample
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.theme.MyTheme
+import id.dreamfighter.android.compose.autocompletesearchbar.domain.models.Person
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.sample.AutoCompleteObjectSample
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.sample.AutoCompleteValueSample
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
 

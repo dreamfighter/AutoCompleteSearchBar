@@ -13,17 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.domain.models
+package id.dreamfighter.android.compose.autocompletesearchbar.presentation.components.autocomplete
 
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.AutoCompleteEntity
-import java.util.Locale
+import androidx.compose.runtime.Stable
 
-data class Person(
-    val name: String,
-    val age: Int
-) : AutoCompleteEntity {
-    override fun filter(query: String): Boolean {
-        return name.toLowerCase(Locale.getDefault())
-            .startsWith(query.toLowerCase(Locale.getDefault()))
-    }
+@Stable
+interface AutoCompleteEntity {
+    fun filter(query: String): Boolean
+}
+
+@Stable
+interface ValueAutoCompleteEntity<T> : AutoCompleteEntity {
+    val value: T
 }

@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.utils
+package id.dreamfighter.android.compose.autocompletesearchbar.presentation.components.autocomplete.utils
 
-import id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete.ValueAutoCompleteEntity
+import id.dreamfighter.android.compose.autocompletesearchbar.presentation.components.autocomplete.ValueAutoCompleteEntity
 
 typealias CustomFilter<T> = (T, String) -> Boolean
 

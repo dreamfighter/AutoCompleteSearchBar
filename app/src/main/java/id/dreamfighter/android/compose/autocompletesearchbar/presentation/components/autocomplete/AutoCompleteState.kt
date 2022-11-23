@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package id.dreamfighter.android.compose.autocompletesearchbar.androiddevchallenge.presentation.components.autocomplete
+package id.dreamfighter.android.compose.autocompletesearchbar.presentation.components.autocomplete
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape
